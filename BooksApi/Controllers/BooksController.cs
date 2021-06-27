@@ -1,6 +1,7 @@
 ﻿using BooksApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BooksApi.Controllers
 {
@@ -8,9 +9,9 @@ namespace BooksApi.Controllers
     [Route("api/[controller]")]
     public class BooksController : ControllerBase
     {
-        private readonly BookService _bookService;
-
-        public BooksController(BookService bookService)
+        private readonly IBookService _bookService;
+        
+        public BooksController(IBookService bookService)
         {
             _bookService = bookService;
         }
@@ -69,5 +70,6 @@ namespace BooksApi.Controllers
 
             return NoContent();
         }
+
     }
 }

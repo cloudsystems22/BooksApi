@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace BooksApi.Services
 {
-    public class BookService
+    public class BookService : IBookService
     {
         private readonly IMongoCollection<Book> _books;
 

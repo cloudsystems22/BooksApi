@@ -1,4 +1,5 @@
 ﻿using BooksApi;
+using BooksApi.Controllers;
 using BooksApi.Services;
 using Moq;
 using NUnit.Framework;
@@ -14,12 +15,11 @@ namespace TestProjectBooksApi.Services
         }
 
         [Test]
-        public void Get()
+        public void RetornaListaBooksGet()
         {
             var bookService = new Mock<BookService>();
-            bookService.Setup(s => s.Get()).Verifiable();
-
-            Assert.Pass("");
+            
+            Assert.Pass("Constrido com sucesso!");
         }
     }
 }
